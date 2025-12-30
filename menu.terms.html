@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Terms & Conditions - Aura Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0a0a0b;
+      color: #e4e4e7;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #18181b 0%, #0a0a0b 100%);
+      border-bottom: 1px solid #27272a;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 32px;
+    }
+
+    .app-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .page-title {
+      font-size: 14px;
+      color: #a1a1aa;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Navigation */
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 8px 16px;
+      background: #27272a;
+      border-radius: 8px;
+      color: #a1a1aa;
+      font-size: 13px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover {
+      background: #3f3f46;
+      color: #e4e4e7;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Effective Date Banner */
+    .effective-date {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .effective-date-icon {
+      width: 40px;
+      height: 40px;
+      background: #27272a;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .effective-date-text {
+      font-size: 13px;
+      color: #a1a1aa;
+    }
+
+    .effective-date-text strong {
+      color: #e4e4e7;
+      font-weight: 600;
+    }
+
+    /* Intro Text */
+    .intro {
+      font-size: 16px;
+      color: #a1a1aa;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #27272a;
+    }
+
+    /* Agreement Notice */
+    .agreement-notice {
+      background: linear-gradient(135deg, #422006 0%, #18181b 100%);
+      border: 1px solid #92400e;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .agreement-notice-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .agreement-notice-text {
+      font-size: 14px;
+      color: #fbbf24;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #3f3f46;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .section-icon.orange {
+      background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+    }
+
+    .section-icon.green {
+      background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+    }
+
+    .section-icon.purple {
+      background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+    }
+
+    .section-icon.red {
+      background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+    }
+
+    .section-icon.blue {
+      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    }
+
+    .section-icon.yellow {
+      background: linear-gradient(135deg, #eab308 0%, #facc15 100%);
+    }
+
+    .subsection-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e4e4e7;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #a1a1aa;
+      margin-bottom: 14px;
+    }
+
+    /* Lists */
+    ul {
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: #a1a1aa;
+    }
+
+    ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: #0ea5e9;
+      border-radius: 50%;
+    }
+
+    /* Links */
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+      text-decoration: underline;
+    }
+
+    /* Third Party Services Card */
+    .third-party-card {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .third-party-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e4e4e7;
+      margin-bottom: 16px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: #27272a;
+      border-radius: 10px;
+      color: #e4e4e7;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .service-link:hover {
+      background: #3f3f46;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .service-link::before {
+      content: "→";
+      color: #0ea5e9;
+      font-size: 12px;
+    }
+
+    /* Warning Box */
+    .warning-box {
+      background: linear-gradient(135deg, #1e1b4b 0%, #18181b 100%);
+      border: 1px solid #4338ca;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .warning-box-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 10px;
+    }
+
+    .warning-box p {
+      color: #c7d2fe;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, #0c4a6e 0%, #18181b 100%);
+      border: 1px solid #0369a1;
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: #a1a1aa;
+      margin-bottom: 16px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #0ea5e9;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .contact-email:hover {
+      background: #38bdf8;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #27272a;
+      margin-top: 40px;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: #52525b;
+    }
+
+    .footer-text a {
+      color: #71717a;
+    }
+
+    .footer-links {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: #71717a;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #a1a1aa;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header {
+        padding: 30px 16px;
+      }
+
+      .container {
+        padding: 30px 16px 60px;
+      }
+
+      .section-title {
+        font-size: 16px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .agreement-notice {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="app-icon">🔢</div>
+      <h1 class="app-name">Aura Calculator</h1>
+      <p class="page-title">Terms & Conditions</p>
+      <a href="index.html" class="nav-link">
+        ← Privacy Policy
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Effective Date -->
+    <div class="effective-date">
+      <div class="effective-date-icon">📅</div>
+      <div class="effective-date-text">
+        <strong>Effective Date:</strong> December 22, 2025<br>
+        Last updated: December 22, 2025
+      </div>
+    </div>
+
+    <!-- Intro -->
+    <p class="intro">
+      These terms and conditions apply to the <strong>Aura Calculator</strong> app for mobile devices, created by <strong>Midnight Labs</strong> as a Freemium service.
+    </p>
+
+    <!-- Agreement Notice -->
+    <div class="agreement-notice">
+      <span class="agreement-notice-icon">⚠️</span>
+      <p class="agreement-notice-text">
+        <strong>Important:</strong> Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application.
+      </p>
+    </div>
+
+    <!-- Section: Intellectual Property -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon purple">©</span>
+        Intellectual Property
+      </h2>
+      <p>
+        Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is strictly prohibited.
+      </p>
+      <p>
+        Any attempts to extract the source code of the Application, translate the Application into other languages, or create derivative versions are not permitted.
+      </p>
+      <p>
+        All trademarks, copyrights, database rights, and other intellectual property rights related to the Application remain the property of the Service Provider.
+      </p>
+    </section>
+
+    <!-- Section: Service Modifications -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon orange">⚙️</span>
+        Service Modifications
+      </h2>
+      <p>
+        The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As such, they reserve the right to modify the Application or charge for their services at any time and for any reason.
+      </p>
+      <p>
+        The Service Provider assures you that any charges for the Application or its services will be clearly communicated to you.
+      </p>
+    </section>
+
+    <!-- Section: Data & Security -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon green">🔒</span>
+        Data & Security
+      </h2>
+      <p>
+        The Application stores and processes personal data that you have provided to the Service Provider in order to provide the Service. It is your responsibility to maintain the security of your phone and access to the Application.
+      </p>
+      
+      <div class="warning-box">
+        <div class="warning-box-title">
+          ⚠️ Security Warning
+        </div>
+        <p>
+          The Service Provider strongly advises against jailbreaking or rooting your phone, which involves removing software restrictions and limitations imposed by the official operating system of your device. Such actions could expose your phone to malware, viruses, malicious programs, compromise your phone's security features, and may result in the Application not functioning correctly or at all.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Third-Party Services -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">🔗</span>
+        Third-Party Services
+      </h2>
+      <p>
+        The Application utilizes third-party services that have their own Terms and Conditions.
+      </p>
+
+      <div class="third-party-card">
+        <h4>Third-party service providers used by this Application:</h4>
+        <div class="services-grid">
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" class="service-link">Google Play Services</a>
+          <a href="https://developers.google.com/admob/terms" target="_blank" rel="noopener noreferrer" class="service-link">AdMob</a>
+          <a href="https://www.google.com/analytics/terms/" target="_blank" rel="noopener noreferrer" class="service-link">Google Analytics for Firebase</a>
+          <a href="https://firebase.google.com/terms/crashlytics" target="_blank" rel="noopener noreferrer" class="service-link">Firebase Crashlytics</a>
+          <a href="https://expo.io/terms" target="_blank" rel="noopener noreferrer" class="service-link">Expo</a>
+          <a href="https://www.revenuecat.com/terms" target="_blank" rel="noopener noreferrer" class="service-link">RevenueCat</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Internet Connectivity -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon blue">📶</span>
+        Internet Connectivity
+      </h2>
+      <p>
+        Some functions of the Application require an active internet connection, which can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held responsible if the Application does not function at full capacity due to lack of access to Wi-Fi or if you have exhausted your data allowance.
+      </p>
+      <p>
+        If you are using the application outside of a Wi-Fi area, please be aware that your mobile network provider's agreement terms still apply. Consequently, you may incur charges from your mobile provider for data usage during the connection to the application, or other third-party charges.
+      </p>
+      <p>
+        By using the application, you accept responsibility for any such charges, including roaming data charges if you use the application outside of your home territory (i.e., region or country) without disabling data roaming.
+      </p>
+    </section>
+
+    <!-- Section: Limitation of Liability -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon red">⚖️</span>
+        Limitation of Liability
+      </h2>
+      <p>
+        The Service Provider cannot always assume responsibility for your usage of the application. For instance:
+      </p>
+      <ul>
+        <li>It is your responsibility to ensure that your device remains charged</li>
+        <li>If your device runs out of battery and you are unable to access the Service, the Service Provider cannot be held responsible</li>
+        <li>The Service Provider relies on third parties to provide information and accepts no liability for any loss resulting from relying entirely on this functionality</li>
+      </ul>
+      <p>
+        While they strive to ensure that the application is updated and accurate at all times, they do rely on third parties to provide information so that they can make it available to you. The Service Provider accepts no liability for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the application.
+      </p>
+    </section>
+
+    <!-- Section: Updates & Termination -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon yellow">🔄</span>
+        Updates & Termination
+      </h2>
+      <p>
+        The Service Provider may wish to update the application at some point. The application is currently available as per the requirements for the operating system (and for any additional systems they decide to extend the availability of the application to) may change, and you will need to download the updates if you want to continue using the application.
+      </p>
+      <p>
+        The Service Provider does not guarantee that it will always update the application so that it is relevant to you and/or compatible with the particular operating system version installed on your device. However, you agree to always accept updates to the application when offered to you.
+      </p>
+      <p>
+        The Service Provider may also wish to cease providing the application and may terminate its use at any time without providing termination notice to you. Unless they inform you otherwise, upon any termination:
+      </p>
+      <ul>
+        <li>The rights and licenses granted to you in these terms will end</li>
+        <li>You must cease using the application, and (if necessary) delete it from your device</li>
+      </ul>
+    </section>
+
+    <!-- Section: Changes -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">📝</span>
+        Changes to These Terms
+      </h2>
+      <p>
+        The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes.
+      </p>
+      <p>
+        The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page.
+      </p>
+    </section>
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+      <h3>Questions or Suggestions?</h3>
+      <p>If you have any questions about these Terms and Conditions, please don't hesitate to contact us.</p>
+      <a href="mailto:midnightlabs.apps@gmail.com" class="contact-email">
+        ✉️ midnightlabs.apps@gmail.com
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">🌙</div>
+    <p class="footer-text">
+      © 2025 Midnight Labs. All rights reserved.<br>
+      <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener noreferrer">Generated with App Privacy Policy Generator</a>
+    </p>
+    <div class="footer-links">
+      <a href="index.html">Privacy Policy</a>
+      <span style="color: #3f3f46;">•</span>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+  </footer>
+
+</body>
+</html>

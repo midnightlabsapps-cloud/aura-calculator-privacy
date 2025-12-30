@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Privacy Policy - Aura Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0a0a0b;
+      color: #e4e4e7;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #18181b 0%, #0a0a0b 100%);
+      border-bottom: 1px solid #27272a;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 32px;
+    }
+
+    .app-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .page-title {
+      font-size: 14px;
+      color: #a1a1aa;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Effective Date Banner */
+    .effective-date {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .effective-date-icon {
+      width: 40px;
+      height: 40px;
+      background: #27272a;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .effective-date-text {
+      font-size: 13px;
+      color: #a1a1aa;
+    }
+
+    .effective-date-text strong {
+      color: #e4e4e7;
+      font-weight: 600;
+    }
+
+    /* Intro Text */
+    .intro {
+      font-size: 16px;
+      color: #a1a1aa;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #27272a;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #3f3f46;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .subsection-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e4e4e7;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #a1a1aa;
+      margin-bottom: 14px;
+    }
+
+    /* Lists */
+    ul {
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: #a1a1aa;
+    }
+
+    ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: #6366f1;
+      border-radius: 50%;
+    }
+
+    /* Links */
+    a {
+      color: #818cf8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #a5b4fc;
+      text-decoration: underline;
+    }
+
+    /* Third Party Services Card */
+    .third-party-card {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .third-party-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e4e4e7;
+      margin-bottom: 16px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: #27272a;
+      border-radius: 10px;
+      color: #e4e4e7;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .service-link:hover {
+      background: #3f3f46;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .service-link::before {
+      content: "→";
+      color: #6366f1;
+      font-size: 12px;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, #1e1b4b 0%, #18181b 100%);
+      border: 1px solid #3730a3;
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: #a1a1aa;
+      margin-bottom: 16px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #6366f1;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .contact-email:hover {
+      background: #818cf8;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #27272a;
+      margin-top: 40px;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: #52525b;
+    }
+
+    .footer-text a {
+      color: #71717a;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header {
+        padding: 30px 16px;
+      }
+
+      .container {
+        padding: 30px 16px 60px;
+      }
+
+      .section-title {
+        font-size: 16px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="app-icon">🔢</div>
+      <h1 class="app-name">Aura Calculator</h1>
+      <p class="page-title">Privacy Policy</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Effective Date -->
+    <div class="effective-date">
+      <div class="effective-date-icon">📅</div>
+      <div class="effective-date-text">
+        <strong>Effective Date:</strong> December 22, 2025<br>
+        Last updated: December 22, 2025
+      </div>
+    </div>
+
+    <!-- Intro -->
+    <p class="intro">
+      This privacy policy is applicable to the <strong>Aura Calculator</strong> app for mobile devices, developed by <strong>Midnight Labs</strong> as a Freemium service. This service is provided "AS IS".
+    </p>
+
+    <!-- Section: Information Collection -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">📱</span>
+        Information Collection and Use
+      </h2>
+
+      <h3 class="subsection-title">User Provided Information</h3>
+      <p>
+        The Application acquires the information you supply when you download and register the Application. Registration with the Service Provider is not mandatory. However, bear in mind that you might not be able to utilize some of the features offered by the Application unless you register with them.
+      </p>
+      <p>
+        The Service Provider may also use the information you provided them to contact you from time to time to provide you with important information, required notices and marketing promotions.
+      </p>
+
+      <h3 class="subsection-title">Automatically Collected Information</h3>
+      <p>
+        The Application may collect certain information automatically, including, but not limited to:
+      </p>
+      <ul>
+        <li>The type of mobile device you use</li>
+        <li>Your mobile device's unique device ID</li>
+        <li>The IP address of your mobile device</li>
+        <li>Your mobile operating system</li>
+        <li>The type of mobile Internet browsers you use</li>
+        <li>Information about the way you use the Application</li>
+      </ul>
+    </section>
+
+    <!-- Section: Location -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">📍</span>
+        Location Information
+      </h2>
+      <p>
+        This Application <strong>does not</strong> gather precise information about the location of your mobile device.
+      </p>
+    </section>
+
+    <!-- Section: AI -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">🤖</span>
+        Artificial Intelligence
+      </h2>
+      <p>
+        The Application <strong>does not</strong> use Artificial Intelligence (AI) technologies to process your data or provide features.
+      </p>
+    </section>
+
+    <!-- Section: Third Parties -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">🔗</span>
+        Third-Party Access
+      </h2>
+      <p>
+        Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service.
+      </p>
+
+      <div class="third-party-card">
+        <h4>Third-party services used by this Application:</h4>
+        <div class="services-grid">
+          <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer" class="service-link">Google Play Services</a>
+          <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer" class="service-link">AdMob</a>
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" class="service-link">Google Analytics for Firebase</a>
+          <a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer" class="service-link">Firebase Crashlytics</a>
+          <a href="https://expo.io/privacy" target="_blank" rel="noopener noreferrer" class="service-link">Expo</a>
+          <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" class="service-link">RevenueCat</a>
+        </div>
+      </div>
+
+      <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+      <ul>
+        <li>As required by law, such as to comply with a subpoena, or similar legal process</li>
+        <li>When they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request</li>
+        <li>With their trusted services providers who work on their behalf and have agreed to adhere to the rules set forth in this privacy statement</li>
+      </ul>
+    </section>
+
+    <!-- Section: Opt-Out -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">🚪</span>
+        Opt-Out Rights
+      </h2>
+      <p>
+        You can halt all collection of information by the Application easily by uninstalling the Application. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+      </p>
+    </section>
+
+    <!-- Section: Data Retention -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">💾</span>
+        Data Retention
+      </h2>
+      <p>
+        The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. The Service Provider will retain Automatically Collected information for up to 24 months and thereafter may store it in aggregate.
+      </p>
+      <p>
+        If you'd like the Service Provider to delete User Provided Data that you have provided via the Application, please contact them at <a href="mailto:midnightlabs.apps@gmail.com">midnightlabs.apps@gmail.com</a> and we will respond in a reasonable time.
+      </p>
+    </section>
+
+    <!-- Section: Children -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">👶</span>
+        Children's Privacy
+      </h2>
+      <p>
+        The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13. The Application does not address anyone under the age of 13.
+      </p>
+      <p>
+        In the case the Service Provider discovers that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider so that they will be able to take the necessary actions.
+      </p>
+    </section>
+
+    <!-- Section: Security -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">🔒</span>
+        Security
+      </h2>
+      <p>
+        The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information we process and maintain.
+      </p>
+      <p>
+        Please be aware that, although we endeavor to provide reasonable security for information we process and maintain, no security system can prevent all potential security breaches.
+      </p>
+    </section>
+
+    <!-- Section: Changes -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">📝</span>
+        Changes to This Policy
+      </h2>
+      <p>
+        This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
+      </p>
+    </section>
+
+    <!-- Section: Consent -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-icon">✅</span>
+        Your Consent
+      </h2>
+      <p>
+        By using the Application, you are giving your consent to the Service Provider processing of your information as set forth in this Privacy Policy now and as amended by us.
+      </p>
+    </section>
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+      <h3>Questions or Concerns?</h3>
+      <p>If you have any questions regarding privacy while using the Application, please contact us.</p>
+      <a href="mailto:midnightlabs.apps@gmail.com" class="contact-email">
+        ✉️ midnightlabs.apps@gmail.com
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">🌙</div>
+    <p class="footer-text">
+      © 2025 Midnight Labs. All rights reserved.<br>
+      <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener noreferrer">Generated with App Privacy Policy Generator</a>
+    </p>
+  </footer>
+
+</body>
+</html>
